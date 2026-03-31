@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.12, pytest-9.0.2, pluggy-1.6.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /workspaces/skills-getting-started-with-github-copilot
+configfile: pytest.ini
+plugins: cov-7.1.0, anyio-4.13.0
+collected 27 items
+
+tests/test_endpoints.py::TestGetActivities::test_get_activities_returns_all_activities PASSED [  3%]
+tests/test_endpoints.py::TestGetActivities::test_get_activities_returns_correct_structure PASSED [  7%]
+tests/test_endpoints.py::TestGetActivities::test_get_activities_participants PASSED [ 11%]
+tests/test_endpoints.py::TestGetActivities::test_get_activities_spot_availability PASSED [ 14%]
+tests/test_endpoints.py::TestGetActivities::test_get_activities_activity_with_no_participants PASSED [ 18%]
+tests/test_signup.py::TestSignup::test_signup_success PASSED             [ 22%]
+tests/test_signup.py::TestSignup::test_signup_adds_participant_to_activity PASSED [ 25%]
+tests/test_signup.py::TestSignup::test_signup_duplicate_email_fails PASSED [ 29%]
+tests/test_signup.py::TestSignup::test_signup_invalid_activity_fails PASSED [ 33%]
+tests/test_signup.py::TestSignup::test_signup_multiple_different_users PASSED [ 37%]
+tests/test_signup.py::TestSignup::test_signup_email_validation PASSED    [ 40%]
+tests/test_signup.py::TestSignup::test_signup_case_sensitive_email PASSED [ 44%]
+tests/test_unregister.py::TestUnregister::test_unregister_success PASSED [ 48%]
+tests/test_unregister.py::TestUnregister::test_unregister_removes_participant PASSED [ 51%]
+tests/test_unregister.py::TestUnregister::test_unregister_not_registered_fails PASSED [ 55%]
+tests/test_unregister.py::TestUnregister::test_unregister_invalid_activity_fails PASSED [ 59%]
+tests/test_unregister.py::TestUnregister::test_unregister_multiple_from_same_activity PASSED [ 62%]
+tests/test_unregister.py::TestUnregister::test_unregister_then_signup_same_email PASSED [ 66%]
+tests/test_unregister.py::TestUnregister::test_unregister_duplicate_attempt_fails PASSED [ 70%]
+tests/test_validation.py::TestResponseValidation::test_error_response_has_detail_field PASSED [ 74%]
+tests/test_validation.py::TestResponseValidation::test_success_response_has_message_field PASSED [ 77%]
+tests/test_validation.py::TestResponseValidation::test_http_status_codes_are_correct PASSED [ 81%]
+tests/test_validation.py::TestResponseValidation::test_content_type_is_json PASSED [ 85%]
+tests/test_validation.py::TestResponseValidation::test_get_activities_returns_json PASSED [ 88%]
+tests/test_validation.py::TestResponseValidation::test_error_messages_are_descriptive PASSED [ 92%]
+tests/test_validation.py::TestResponseValidation::test_activity_names_with_spaces_are_handled PASSED [ 96%]
+tests/test_validation.py::TestResponseValidation::test_email_parameters_are_validated PASSED [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.12-final-0 _______________
+
+Name         Stmts   Miss  Cover   Missing
+------------------------------------------
+src/app.py      33      1    97%   83
+------------------------------------------
+TOTAL           33      1    97%
+============================== 27 passed in 0.27s ==============================
